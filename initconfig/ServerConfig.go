@@ -28,3 +28,11 @@ func FinishInit(path string) {
 		InitConfig[k] = v
 	}
 }
+
+func GetConfig(key string) string {
+	v, ok := InitConfig[key]
+	if !ok {
+		log.Fatal("Missing necessary configuration\n")
+	}
+	return v
+}

@@ -1,0 +1,51 @@
+{
+  "msg": "ok",
+  "data": [
+    {
+      "app_id": "app1",
+      "task_list": [
+        {
+          "task_id": "1",
+          "task_name":"task1",
+          "url_list": [
+            {
+              "url":"https://.....",
+              "status": 0
+            },
+            {
+              "url":"https://.....",
+              "status": 0
+            },
+            {
+              "url":"https://.....",
+              "status": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "app_id": "app2",
+      "task_list": [
+        {
+          "task_id": "2",
+          "task_name": "task2",
+          "url_list": [
+            {
+              "url":"https://.....",
+              "status": 0
+            },
+            {
+              "url":"https://.....",
+              "status": 0
+            },
+            {
+              "url":"https://.....",
+              "status": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
