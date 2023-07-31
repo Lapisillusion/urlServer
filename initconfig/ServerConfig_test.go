@@ -6,6 +6,6 @@ import (
 )
 
 func TestFinishInit(t *testing.T) {
-	FinishInit("config")
+	FinishInit("../config")
 	fmt.Println(InitConfig)
 }

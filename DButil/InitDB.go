@@ -1,4 +1,4 @@
-package initDB
+package DButil
 
 import (
 	"database/sql"
@@ -10,11 +10,11 @@ import (
 
 func InitDB() *sql.DB {
 	sourse := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
-		initconfig.GetConfig("user"),
-		initconfig.GetConfig("password"),
-		initconfig.GetConfig("url"),
-		initconfig.GetConfig("port"),
-		initconfig.GetConfig("dbname"))
+		initconfig.Get("user"),
+		initconfig.Get("password"),
+		initconfig.Get("dburl"),
+		initconfig.Get("dbport"),
+		initconfig.Get("dbname"))
 	db, err := sql.Open("mysql", sourse)
 	if err != nil {
 		log.Fatal("init db failed\n", err)

@@ -8,7 +8,7 @@ import (
 )
 
 func TestParser(t *testing.T) {
-	f, _ := os.Open("../test.json")
+	f, _ := os.Open("./test.json")
 	bytes, _ := io.ReadAll(f)
 	p, _ := Parser(bytes)
 	fmt.Println(p)

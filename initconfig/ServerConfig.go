@@ -24,12 +24,15 @@ func FinishInit(path string) {
 	for _, e := range entrys {
 		e = strings.TrimSpace(e)
 		pair := strings.Split(e, ":")
+		if len(pair) != 2 {
+			continue
+		}
 		k, v := pair[0], pair[1]
 		InitConfig[k] = v
 	}
 }
 
-func GetConfig(key string) string {
+func Get(key string) string {
 	v, ok := InitConfig[key]
 	if !ok {
 		log.Fatal("Missing necessary configuration\n")

@@ -1,5 +1,7 @@
-url:127.0.0.1
-port:3306
+dburl:127.0.0.1
+dbport:3306
 user:root
 password:123abc
 dbname:goweb
+listenurl:0.0.0.0
+listenport:12345
