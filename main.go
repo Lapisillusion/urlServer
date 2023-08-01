@@ -9,6 +9,18 @@ import (
 	"urlServer/initconfig"
 )
 
+const Universal_ok = `{
+  "code": 200,
+  "message": "ok",
+  "data": true
+}`
+
+const Universal_failed = `{
+  "code": 503,
+  "message": "failed",
+  "data": false
+}`
+
 func main() {
 
 	flag.Parse()
