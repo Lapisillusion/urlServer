@@ -7,5 +7,5 @@ import (
 
 func TestFinishInit(t *testing.T) {
 	FinishInit("../config")
-	fmt.Println(InitConfig)
+	fmt.Println(initConfig)
 }

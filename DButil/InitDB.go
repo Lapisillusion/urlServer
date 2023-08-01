@@ -9,13 +9,13 @@ import (
 )
 
 func InitDB() *sql.DB {
-	sourse := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
+	source := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
 		initconfig.Get("user"),
 		initconfig.Get("password"),
 		initconfig.Get("dburl"),
 		initconfig.Get("dbport"),
 		initconfig.Get("dbname"))
-	db, err := sql.Open("mysql", sourse)
+	db, err := sql.Open("mysql", source)
 	if err != nil {
 		log.Fatal("init db failed\n", err)
 	}

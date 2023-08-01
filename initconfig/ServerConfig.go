@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-var InitConfig = make(map[string]string)
+var initConfig = make(map[string]string)
 
 func FinishInit(path string) {
 	file, err := os.Open("./" + path)
@@ -28,12 +28,12 @@ func FinishInit(path string) {
 			continue
 		}
 		k, v := pair[0], pair[1]
-		InitConfig[k] = v
+		initConfig[k] = v
 	}
 }
 
 func Get(key string) string {
-	v, ok := InitConfig[key]
+	v, ok := initConfig[key]
 	if !ok {
 		log.Fatal("Missing necessary configuration\n")
 	}

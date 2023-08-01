@@ -41,6 +41,6 @@ func index(writer http.ResponseWriter, request *http.Request) {
 
 /*
 1、task_slot时间范围
-2、今日任务计划时间范围
+2、近日任务计划时间范围
 3、状态变更仅更新当日数据？
 */
